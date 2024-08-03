@@ -1,0 +1,47 @@
+//using arduino uno 
+#define l1 10
+#define l2 11
+#define l3 12
+#define l4 13
+void setup()
+{
+  pinMode(l1, OUTPUT);
+  pinMode(l2, OUTPUT);
+  pinMode(l3, OUTPUT);
+  pinMode(l4, OUTPUT);
+  int n=10;
+  digitalWrite(l1,LOW);
+  digitalWrite(l2,LOW);
+  digitalWrite(l3,LOW);
+  digitalWrite(l4,LOW);
+  for(n =10;n>=0;n--)
+  {
+    int t=n;
+    int a= n%2;
+    if (a==1)
+      digitalWrite(l1,HIGH);
+    n=n/2;
+    int b=n%2;
+    if (b==1)
+      digitalWrite(l2,HIGH);
+    n=n/2;
+    int c=n%2;
+    if (c==1)
+      digitalWrite(l3,HIGH);
+    n=n/2;
+    int d=n%2;
+    if (d==1)
+      digitalWrite(l4,HIGH);
+    delay(2000);
+      digitalWrite(l1,LOW);
+  digitalWrite(l2,LOW);
+  digitalWrite(l3,LOW);
+  digitalWrite(l4,LOW);
+    n=t;
+  }
+}
+
+void loop()
+{
+}
+  
